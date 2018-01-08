@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './component/counter/counter.component';
-import { CounterService } from './service/counter.service';
+import { CounterService } from './service/count/counter.service';
 import { CounterInterface } from './interface/change-counter.interface';
 
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CounterInterface } from '../interface/change-counter.interface';
+import { CounterInterface } from '../../interface/change-counter.interface';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
