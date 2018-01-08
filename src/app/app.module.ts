@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './component/counter/counter.component';
+import { CounterService } from './service/counter.service';
+import { CounterInterface } from './interface/change-counter.interface';
 
 
 @NgModule({
@@ -14,7 +16,10 @@ import { CounterComponent } from './component/counter/counter.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    CounterService,
+    {provide: CounterInterface, useExisting: CounterService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
