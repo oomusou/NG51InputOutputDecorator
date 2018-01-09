@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { CounterInterface } from './interface/change-counter.interface';
+import { CounterInterfaceToken } from './interface/interface-token';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,6 @@ export class AppComponent {
   initialCount = 2;
   counter$: Observable<number> = this.counterService.counter$;
 
-  constructor(private counterService: CounterInterface) {
+  constructor(@Inject(CounterInterfaceToken) private counterService: CounterInterface) {
   }
 }
