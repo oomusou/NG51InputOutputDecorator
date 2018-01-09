@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './component/counter/counter.component';
 import { CounterService } from './service/count/counter.service';
-import { CounterInterfaceToken } from './interface/interface-token';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,7 @@ import { CounterInterfaceToken } from './interface/interface-token';
   ],
   providers: [
     CounterService,
-    {provide: CounterInterfaceToken, useExisting: CounterService}
+    {provide: 'CounterInterfaceToken', useExisting: CounterService}
   ],
   bootstrap: [AppComponent]
 })
